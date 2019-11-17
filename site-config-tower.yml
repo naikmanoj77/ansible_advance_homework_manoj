@@ -2,5 +2,10 @@
 - hosts: localhost
   gather_facts: false
   #become: yes
+- name: Run command
+  command: whoami
+  become: yes
+  become_user: root
+  become_method: sudo
   roles:
     - config-tower
