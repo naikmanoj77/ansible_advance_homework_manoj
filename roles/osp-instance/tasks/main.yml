@@ -1,20 +1,13 @@
 ---
 # tasks file for Provision_Infrastructure
----
-- name: Cconfigure multi tier application on cloud
-  hosts: all
-  become: True
-  gather_facts: false   # Faster the execution of playbook
-  roles:
+ - role: haproxy
+   when: inventory_hostname in groups['workstation']
 
-    - role: haproxy
-      when: inventory_hostname in groups['workstation']
+ - role: apache
+   when: inventory_hostname in groups['application']
 
-    - role: apache
-      when: inventory_hostname in groups['application']
+ - role: tomcat
+   when: inventory_hostname in groups['application']
 
-    - role: tomcat
-      when: inventory_hostname in groups['application']
-
-    - role: postgresql
-      when: inventory_hostname in groups['appdbsrv']
+  - role: postgresql
+    when: inventory_hostname in groups['appdbsrv']
