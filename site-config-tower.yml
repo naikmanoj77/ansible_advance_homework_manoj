@@ -7,6 +7,9 @@
       get_url:
         url: http://www.opentlc.com/download/ansible_bootcamp/openstack_keys/openstack.pem
         dest: /root/.ssh/
+        ansible_become: yes
+        ansible_become_method: sudo
+        ansible_become_user: root
         owner: root
         group: root
         mode: 0400
@@ -15,6 +18,9 @@
       get_url:
         url: http://www.opentlc.com/download/ansible_bootcamp/openstack_keys/openstack.pub
         dest: /root/.ssh/
+        ansible_become: yes
+        ansible_become_method: sudo
+        ansible_become_user: root
         owner: root
         group: root
         mode: 0400
