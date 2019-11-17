@@ -1,4 +1,6 @@
 ---
+- become: yes
+- become_user: root
 # tasks file for roles/config-tower
 - include_tasks: pre-config-tower.yml
 - include_tasks: post-config-tower.yml
