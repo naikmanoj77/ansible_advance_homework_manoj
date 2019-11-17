@@ -6,7 +6,7 @@
        group: workstation
 
 
-- import_playbook: 01_site-setup-workstation.yml
-- import_playbook: 02_site-install-isolated-node.yml
-- import_playbook: 03_site-setup-openstack.yml
-- import_playbook: 04_site-config-tower.yml
+- import_playbook: site-setup-workstation.yml
+- import_playbook: site-install-isolated-node.yml
+- import_playbook: site-setup-openstack.yml
+- import_playbook: site-config-tower.yml
