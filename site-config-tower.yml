@@ -3,4 +3,4 @@
   gather_facts: false 
   become: false
   roles:
-    - { role: config-tower, become: yes }
+    - config-tower
