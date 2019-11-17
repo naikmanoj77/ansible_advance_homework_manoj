@@ -1,7 +1,7 @@
 ---
-- hosts: localhost ansible_become=false
+- hosts: localhost 
   gather_facts: false 
-  become: yes 
+  become: false
   pre_tasks:
     - name: Download Private key
       get_url:
