@@ -6,9 +6,12 @@
       path: /root/ansible-tower-setup-latest/inventory
       block: |
         [isolated_group_osp]
-        workstation-0b31.rhpds.opentlc.com ansible_user='cloud-user' #ansible_ssh_private_key_file='~/.ssh/openstack.pem' ansible_ssh_common_args='-o StrictHostKeyChecking=no'
+        workstation-0b31.rhpds.opentlc.com 
         [isolated_group_osp:vars]
         controller=tower
+        ansible_ssh_private_key_file='~/.ssh/openstack.pem'
+        ansible_ssh_common_args='-o StrictHostKeyChecking=no'
+        ansible_user='cloud-user'
       state: present
   - name: Run Ansible Tower setup
     shell: /root/ansible-tower-setup-latest/setup.sh
