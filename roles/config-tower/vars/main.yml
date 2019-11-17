@@ -43,3 +43,8 @@ job_template_smoke_aws: "Smoke test Prod env"
 aws_smoke_app_playbook: site-smoketest-aws.yml
 opentlc_login: manojnaik-techmahindra.com
 opentlc_password: Man0jna1k
+param_repo_base: http://www.opentlc.com/download/ansible_bootcamp
+github_repo: https://github.com/naikmanoj77/ansible_advance_homework_manoj.git
+REGION_NAME: us-east-1
+EMAIL: manojnaik@techmahindra.com
+path_to_opentlc_key: /root/.ssh/33a6key.pem
