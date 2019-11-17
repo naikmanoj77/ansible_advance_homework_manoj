@@ -1,6 +1,6 @@
 ---
-- hosts: localhost 
+- hosts: bastion.33a6.example.opentlc.com
   gather_facts: false 
-  become: false
+  become: true
   roles:
     - config-tower
