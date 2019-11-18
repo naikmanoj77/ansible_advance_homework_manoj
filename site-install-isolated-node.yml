@@ -2,8 +2,6 @@
   gather_facts: false
   tasks:
   - name: display the hostname
-    become: true
-    become_user: root
     shell: hostname
     register: name
   - debug: 
