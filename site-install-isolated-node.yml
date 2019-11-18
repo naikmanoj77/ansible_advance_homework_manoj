@@ -1,4 +1,4 @@
-- hosts: localhost
+- hosts: bastion.2368.example.opentlc.com
   gather_facts: false
   tasks:
   - name: Append inventory file

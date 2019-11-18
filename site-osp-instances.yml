@@ -5,7 +5,6 @@
        name: "workstation-c209.rhpds.opentlc.com"
        group: workstation
 
-
 - import_playbook: site-setup-workstation.yml
 - import_playbook: site-install-isolated-node.yml
 - import_playbook: site-setup-openstack.yml
