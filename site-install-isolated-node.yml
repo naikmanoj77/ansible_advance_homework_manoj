@@ -1,6 +1,13 @@
 - hosts: localhost
   gather_facts: false
   tasks:
+  - name: display the hostname
+    become: true
+    become_user: root
+    shell: hostname
+    register: name
+  - debug: 
+      var: name
   - name: Append inventory file
     blockinfile:
       path: /root/ansible-tower-setup-latest/inventory
@@ -15,13 +22,6 @@
         ansible_become_user=root
         ansible_become=true
       state: present
-  - name: display the hostname
-    become: true
-    become_user: root
-    shell: hostname
-    register: name
-  - debug: 
-      var: name
   - name: Run Ansible Tower setup
     become: true
     become_user: root
