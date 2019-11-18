@@ -6,15 +6,17 @@
 - name: Machine Credentail to connect to workstation using openstack.pub
   tower_credential:
     name: Connect_to_workstation
+    ssh_key_data: "{{ lookup('file', '/root/.ssh/openstack.pem') }}"
+    tower_verify_ssl: no
+    username: cloud-user
+    kind: ssh
     organization: Default
     state: present
-    kind: ssh
-    tower_host: tower1.{{tower_GUID}}.example.opentlc.com
     tower_username: admin
     tower_password: r3dh4t1!
-    tower_verify_ssl: no
-    ssh_key_data: /root/.ssh/openstack.pem
-    username: cloud-user
+    tower_host: tower1.{{tower_GUID}}.example.opentlc.com
+    #ssh_key_data: /root/.ssh/openstack.pem
+   
 
 - name: Create Inventory
   command: |
