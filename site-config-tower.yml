@@ -1,5 +1,5 @@
 ---
-- hosts: bastion.2368.internal
+- hosts: localhost
   gather_facts: false
   roles:
     - config-tower
