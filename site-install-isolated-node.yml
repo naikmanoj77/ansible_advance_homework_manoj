@@ -1,4 +1,4 @@
-- hosts: localhost
+- hosts: 54.167.93.37
   gather_facts: false
   tasks:
   - name: Append inventory file
