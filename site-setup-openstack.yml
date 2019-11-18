@@ -1,6 +1,6 @@
 # Playbook to setup workstation and create osp network, router, SG and ssh keypair
 
-- hosts: localhost
+- hosts: bastion.2368.internal
   tasks:
   - name: Create workstation inventory
     add_host:

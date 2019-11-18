@@ -1,8 +1,5 @@
 ---
-- hosts: localhost
+- hosts: bastion.2368.internal
   gather_facts: false
-#  become: yes
-#  become_user: root
-#  become_method: sudo
   roles:
     - config-tower
