@@ -1,4 +1,4 @@
-- hosts: bastion.2368.internal 
+- hosts: localhost
   tasks:
   - name: Create workstation inventory
     add_host:
