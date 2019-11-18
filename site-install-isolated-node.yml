@@ -1,7 +1,8 @@
-- hosts: 54.167.93.37
+- hosts: localhost
   gather_facts: false
   tasks:
   - name: Append inventory file
+    command: hostname
     blockinfile:
       path: /root/ansible-tower-setup-latest/inventory
       block: |
