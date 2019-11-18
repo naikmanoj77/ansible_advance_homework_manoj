@@ -1,0 +1,13 @@
+---
+# tasks file for Provision_Infrastructure
+ - role: haproxy
+   when: inventory_hostname in groups['workstation']
+
+ - role: apache
+   when: inventory_hostname in groups['application']
+
+ - role: tomcat
+   when: inventory_hostname in groups['application']
+
+  - role: postgresql
+    when: inventory_hostname in groups['appdbsrv']

@@ -1,0 +1,10 @@
+---
+- hosts: localhost
+  gather_facts: false
+  become: yes
+  become_user: root
+  become_method: sudo
+  tasks:
+  - name: Installing the Ansible tower.
+    shell: sh /root/task.sh
+  

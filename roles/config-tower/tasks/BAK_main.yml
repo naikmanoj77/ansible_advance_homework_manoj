@@ -1,0 +1,7 @@
+---
+# tasks file for roles/config-tower
+- { include_tasks: pre-config-tower.yml, become: true }
+- { include_tasks: post-config-tower.yml, become: true }
+- { include_tasks: ec2_dynamic.yml, become: true }
+- { include_tasks: job_template.yml, become: true }
+- { include_tasks: workflow_template.yml, become: true }

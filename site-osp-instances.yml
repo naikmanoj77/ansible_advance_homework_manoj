@@ -1,0 +1,11 @@
+- hosts: localhost
+  tasks:
+  - name: Create workstation inventory
+    add_host:
+       name: "workstation-c209.rhpds.opentlc.com"
+       group: workstation
+
+- import_playbook: site-setup-workstation.yml
+- import_playbook: site-install-isolated-node.yml
+- import_playbook: site-setup-openstack.yml
+- import_playbook: site-config-tower.yml
