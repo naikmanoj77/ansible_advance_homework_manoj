@@ -20,6 +20,8 @@
         ansible_user='cloud-user'
         ansible_become_user=root
         ansible_become=true
+      ansible_become_user=root
+      ansible_become=true
       create: yes
       state: present
   - name: Run Ansible Tower setup
