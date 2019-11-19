@@ -21,8 +21,6 @@
   #      ansible_become=true
   #    state: present
   - name: Run Ansible Tower setup
-    become: true
-    become_user: root
     shell: /root/ansible-tower-setup-latest/setup.sh
     async: 3600
     poll: 36
