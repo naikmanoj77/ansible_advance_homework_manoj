@@ -12,6 +12,7 @@
   copy:
     src: "{{path_to_opentlc_key}}"
     dest: /root/secret.pem
+    sudo: true
 
 
 - name: Copy inventory vars
@@ -24,4 +25,5 @@
   copy:
     src: survey.json
     dest: /tmp/survey.json
+    sudo: true
 

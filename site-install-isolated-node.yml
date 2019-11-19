@@ -1,4 +1,4 @@
-- hosts: bastion.2368.internal
+- hosts: localhost
   gather_facts: false
   tasks:
   - name: display the hostname
