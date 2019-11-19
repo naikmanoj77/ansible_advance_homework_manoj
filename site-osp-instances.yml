@@ -1,4 +1,4 @@
-- hosts: localhost
+- hosts: workstation
   tasks:
   - name: Create workstation inventory
     add_host:
