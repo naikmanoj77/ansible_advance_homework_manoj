@@ -1,6 +1,5 @@
 - hosts: localhost
   gather_facts: false
-  delegate_to: bastion.2368.internal
   tasks:
   - name: display the hostname
     shell: hostname
