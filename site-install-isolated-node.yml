@@ -7,23 +7,6 @@
   - debug: 
       var: name
     
-  - name: Append inventory file
-    blockinfile:
-      path: /root/ansible-tower-setup-latest/inventory
-      block: |
-        [isolated_group_osp]
-        workstation-c209.rhpds.opentlc.com 
-        [isolated_group_osp:vars]
-        controller=tower
-        ansible_ssh_private_key_file='~/.ssh/openstack.pem'
-        ansible_ssh_common_args='-o StrictHostKeyChecking=no'
-        ansible_user='cloud-user'
-        ansible_become_user=root
-        ansible_become=true
-      become_user: root
-      become: true
-      create: yes
-      state: present
   - name: Run Ansible Tower setup
     become: true
     become_user: root
