@@ -7,7 +7,7 @@
   - debug: 
       var: name
   - name: display username
-    shell: whoami
+    shell: whoami ; pwd
     register: name1
   - debug: 
       var: name1
