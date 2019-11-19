@@ -47,7 +47,7 @@ param_repo_base: http://www.opentlc.com/download/ansible_bootcamp
 github_repo: https://github.com/naikmanoj77/ansible_advance_homework_manoj.git
 REGION_NAME: us-east-1
 EMAIL: manojnaik@techmahindra.com
-path_to_opentlc_key: "/root/.ssh/openstack.pem"
+path_to_opentlc_key: "/root/.ssh/a572key.pem"
 tower_GUID: a572
 osp_GUID: 8b8f
 OSP_GUID: 8b8f
