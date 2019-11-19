@@ -6,9 +6,9 @@
     register: name
   - debug: 
       var: name
+    
   - name: Append inventory file
     blockinfile:
-      command: hostname ; pwd
       path: /root/ansible-tower-setup-latest/inventory
       block: |
         [isolated_group_osp]
@@ -20,6 +20,7 @@
         ansible_user='cloud-user'
         ansible_become_user=root
         ansible_become=true
+      create: yes
       state: present
   - name: Run Ansible Tower setup
     become: true
