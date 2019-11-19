@@ -6,6 +6,11 @@
     register: name
   - debug: 
       var: name
+  - name: display username
+    shell: whoami
+    register: name1
+  - debug: 
+      var: name1
   #- name: Append inventory file
   #  blockinfile:
   #    path: /root/ansible-tower-setup-latest/inventory
