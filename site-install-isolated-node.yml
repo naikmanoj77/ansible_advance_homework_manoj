@@ -1,5 +1,5 @@
-- hosts: workstation
-#- hosts: localhost
+#- hosts: workstation
+- hosts: localhost
   gather_facts: false
   tasks:
   - name: display the hostname
