@@ -1,3 +1,6 @@
+- name: display hostname
+  command: hostname ; whoami
+
 - name: Generate var file for order_svc.sh script
   template:
     src: aws_jq_vars.yml
