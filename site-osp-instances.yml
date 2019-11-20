@@ -2,7 +2,7 @@
   tasks:
   - name: Create workstation inventory
     add_host:
-       name: "workstation-c209.rhpds.opentlc.com"
+       name: "workstation-8b8f.rhpds.opentlc.com"
        group: workstation
 
 - import_playbook: site-setup-workstation.yml
