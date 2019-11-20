@@ -1,7 +1,9 @@
-#- hosts: workstation
-- hosts: localhost
+- hosts: workstation
+#- hosts: localhost
   gather_facts: false
   tasks:
+  - name: Current hostname
+    command: hostname ; whoami ; pwd
   - name: Append inventory file
     blockinfile:
       path: /root/ansible-tower-setup-latest/inventory
